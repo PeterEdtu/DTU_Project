@@ -1,0 +1,20 @@
+functional requirements
+1.1 Customers shall be able to publish a description, a ended date,a price and conditions to theirs stuff
+1.2 Customers shall be able to bid the wares
+1.3 Customers shall (be able to) make an account to use the system
+1.11 Customers shall entry a valid payment system with enough money to bid
+1.12 Customers shall be able to modify/cancel theirs stuff
+1.13 Customers who bid shall be able to cancel their bids
+1.15 Customers shall have one valid address/email address to delivery
+
+non-functional requirements
+1.4 The system shall update/delete the stuff/data if one of them is bought/cancelled/modified (risk)
+1.5 The system shall manage money transfer (risk)
+1.6 The system shall make a backup every action and recover data if the Website crashed (risk)
+1.7 The system shall always work
+1.8 The system shall be simple to use with all information about the stuff written
+1.9 The system shall have space to ads and have the logo on all sides
+1.10 The system shall host many transfers/users at the same time
+1.14 The system shall know who has the current highest bid
+1.16 The system shall send the stuff to the correct person
+1.17 The system calculate the delivery price and select the user with the current hight bid (bid price - delivery price)
