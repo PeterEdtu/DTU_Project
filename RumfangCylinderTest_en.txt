@@ -1,0 +1,3 @@
+String input: The program stop with Basic Java Error
+Input with int<0: The program accept and give an incorrect result
+Input with fraction: Basic Java Error
