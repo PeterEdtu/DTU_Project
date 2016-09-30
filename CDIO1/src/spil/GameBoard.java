@@ -1,19 +1,14 @@
 /**
  * @author Gruppe 40
+ * @version 1.0 
  * CDIO del 1
- * @version 1.0
  * 
- * Daniel Anusic
- * Daniel Larsen
  * Peter Issam El-Habr s165202
- * Loui Southwick
- * Nemanja Stefan Mitrovic
  */
-
 
 package spil;
 
-public class Gameboard {
+public class GameBoard {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
