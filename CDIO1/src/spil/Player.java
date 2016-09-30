@@ -1,21 +1,27 @@
 /**
  * @author Gruppe 40
  * CDIO del 1
+ * @version 1.0
  * 
  * Daniel Anusic
  * Daniel Larsen
- * Peter Issam El-Habr
+ * Peter Issam El-Habr s165202
  * Loui Southwick
  * Nemanja Stefan Mitrovic
  */
 
 package spil;
 
+import java.awt.List;
+import java.util.ArrayList;
+
 public class Player {
 
 	private static Dice d1 = new Dice();
 	private static Dice d2 = new Dice();
 
+	private ArrayList<String> result = new ArrayList<String> ();
+	public int id;
 	private int score;
 	private String name;
 	private final int MAX_SCORE = 40;
@@ -33,9 +39,9 @@ public class Player {
 	public String toString() {
 		String showscore;
 		if (this.win() == false)
-			showscore = this.name + "'s score is: " + this.score;
+			showscore = "["+id+"]"+this.name + "'s score is: " + this.score+" {+"+result+"}";
 		else
-			showscore = this.name + " wins with " + this.score;
+			showscore = "["+id+"]"+this.name + " wins with " + this.score+"\n-----------------------------------------";
 		return showscore;
 	}
 
@@ -57,8 +63,15 @@ public class Player {
 	}
 
 	public void play() {
-		d1.roll();
-		d2.roll();
-		this.addToScore(d1.getFaceValue() + d2.getFaceValue());
+		result.clear();
+		d1.initiate();
+		d2.initiate();
+		while (d1.getFaceValue()==d2.getFaceValue()){
+			d1.roll();
+			d2.roll();
+			result.add(""+d1);
+			result.add(""+d2);
+			this.addToScore(d1.getFaceValue() + d2.getFaceValue());
+		}
 	}
 }
