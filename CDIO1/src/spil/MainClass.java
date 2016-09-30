@@ -6,7 +6,7 @@
  */
 
 
-package source;
+package spil;
 
 public class MainClass {
 
