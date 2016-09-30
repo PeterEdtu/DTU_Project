@@ -1,3 +1,15 @@
+/**
+ * @author Gruppe 40
+ * CDIO del 1
+ * @version 1.0
+ * 
+ * Daniel Anusic
+ * Daniel Larsen
+ * Peter Issam El-Habr s165202
+ * Loui Southwick
+ * Nemanja Stefan Mitrovic
+ */
+
 package spil;
 
 public class Dice {
@@ -19,7 +31,10 @@ public class Dice {
 	}
 
 	public String toString() {
-		return "faceValue: " + getFaceValue();
+		return ""+getFaceValue();
+	}
+	public void initiate(){
+		faceValue=0;
 	}
 
 }
