@@ -3,7 +3,7 @@
  * @author PeterElHabr
  * 40_CDIO1
  */
-package source;
+package spil;
 
 public class Player {
 	
