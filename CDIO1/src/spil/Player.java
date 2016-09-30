@@ -7,9 +7,12 @@ package spil;
 
 public class Player {
 	
+	private static Dice D1 = new Dice();
+	private static Dice D2 = new Dice();
+	
 	private int score;
 	private String name;
-	public static int Maxscore=40;
+	private final int MAX_SCORE=40;
 	
 	/**
 	 * Create a player who can roll
@@ -34,14 +37,20 @@ public class Player {
 	 * Remove (amount<0)
 	 * @param amount
 	 */
-	public void AddToScore(int amount){
+	private void AddToScore(int amount){
 		this.score=this.score+amount;
 	}
 	
 	public boolean Win(){
-		if (this.score>=Maxscore){
+		if (this.score>=MAX_SCORE){
 			return true;
 		}else return false;
+	}
+	
+	public void Play(){
+		D1.roll();
+		D2.roll();
+		this.AddToScore(D1.getFaceValue()+D2.getFaceValue());
 	}
 }
 
