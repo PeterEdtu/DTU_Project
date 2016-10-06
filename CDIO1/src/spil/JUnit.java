@@ -115,5 +115,37 @@ public class JUnit {
 		
 		assertEquals(expected, result);
 	}
+	
+	@Test
+	public final void testDiceCupShakeOneDie(){
+		boolean expected = true;
+		boolean result;
+		int rollValue=diceCup.shakeOneDie(player1);
+		result=(0<rollValue && rollValue<7);
+		
+		assertEquals(expected,result);
+	}
+	
+	@Test
+	public final void testDiceCupShakeTwoDice(){
+		boolean expected = true;
+		boolean result;
+		int rollValue=diceCup.shakeTwoDice(player1);
+		result=(1<rollValue && rollValue<13);
+		
+		assertEquals(expected,result);
+	}
+	
+	@Test
+	public final void testTC11TC14(){
+		boolean expected = true;
+		boolean result;
+		for (int n=0;n<=12000;++n){
+		int rollValue=diceCup.onlyShakeTwoDice(player1);
+		result=(1<rollValue && rollValue<13);
+		assertEquals(expected,result);
+		}
+		
+	}
 
 }
